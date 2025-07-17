@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+        <h1> Programming Languages💻 </h1>
+        </header>
+        <a class="create-btn" href="/posts/new">➕ Create New Post</a>
+        <% for(post of posts){ %>
+            <div class="post-card">
+                <div class="post-header">
+                    <h3><%= post.username %></h3>
+                </div>
+                <p><%= post.content %></p>
+                <div class="post-actions">
+                    <a href="/posts/<%= post.id %>" class="view-btn">🔍 View More</a>
+                    <form method="POST" action="/posts/<%= post.id %>?_method=DELETE">
+                        <button class="delete-btn">🗑️ Delete</button>
+                    </form>
+                </div>
+            </div>
+        <% } %>
+    </div>
+
+
+
+    <footer>
+        <div>
+            All Rights Reserved! &copy;<br>
+            For Education purpose only!
+        </div>
+    </footer>
+</body>
+</html>

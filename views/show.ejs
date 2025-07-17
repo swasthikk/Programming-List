@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="post-detail">
+        <h2>Post Detail View</h2>
+        <p><strong>Post ID:</strong> <%= post.id %></p>
+        <div class="post-card">
+            <h3><%= post.username %></h3>
+            <h3><%= post.description %></h3>
+            <p><%= post.content %></p>
+        </div>
+        <a class="back-link" href="/posts">← Back to All Posts</a>
+    </div>
+</body>
+</html>
